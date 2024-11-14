@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;/**nos combierte el display en un display lfex**/
+            background-color: bisque;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* hacemos que el body ocupe el 100 % de la altura */
+            margin: 0; /* sacamos los margnes del body*/
+        }
+
+        main {
+            display: flex;
+            flex-direction: column; /* alinea los elementos de manera vertical  */
+            align-items: center; /* centra los elementos de manera horizontal */
+        background-color: white;
+         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 100;
+         margin: 60px;/**se le agrega un margen a todo el main**/
+            padding: 20px; 
+            width: 300px; 
+        }
+
+        .letrascolor {
+            color: aquamarine;/**aca se cambia el color solamente a las letras con la clase letrascolor **/
+            font-size: 14px;/**aca le aplico el tamaño de fuente a las letras que contienen la classe llamada letrascolor**/
+        }
+
+        .primercaja, .segundacaja {
+            display: flex;
+            align-items: center;/**alinea los items de la primera caja de manera horizontal**/
+         justify-content: center;/**ya explique lo que hace esto**/
+            gap: 20px; /* Espaciado entre los elementos */
+            width: 100%;
+            margin-bottom: 20px; /* Separación entre las cajas */
+
+
+
+        }
+
+        .fotico img { /**se le ajusta el tamaño a la clase img que esta dentro de la clase fotico :v**/
+         width: 40px;
+        height: 40px;
+        }
+
+
+        .conjuntoletras p {//**se ajustan los parametros de el texto**/
+            margin: 5px 0;
+            text-align: left;/**hace que las letras esten pegadas a la izquierda**/
+
+
+        }
+
+        .letrasprincipales { 
+            font-size: 19px;/**se le aplican los cambios esteticos a los parrafos que tienen la clase letrasprincipales**/
+            font-weight: bold;/**le agregamos estilo a las letras principales**/
+
+
+
+
+        }
+        .contenedor {
+            text-align: center; /**centra el contenedor y le agrega un espacio entre el tope superior y la foto de 30px**/
+            margin-bottom: 30px; 
+
+
+        }
+
+        .logocontactar { /**se pone el logo de whatssapp abajo a la derecha **/
+            background-color: aqua;
+
+            bottom: 20px;
+            right: 20px;
+         display: flex;
+         position: fixed;
+        justify-content: center;
+
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <img class="logocontactar" src="imagenes/contactar.png" alt="iconochidodewhatsapp" width="30px" height="30px">
+    
+    <main>
+    <div class="contenedor"><!-- contenedor para position -->
+            <img class="libreta" src="imagenes/libreta.webp" alt="" width="300px">
+        </div>
+
+        <div class="primercaja"><!-- primer caja que contiene el pinguino -->
+         <div class="fotico">
+                <img src="imagenes/contactar.png" alt="40px" width="40px" height="40px"> <!-- fotico de pinguino con sus medidas -->
+         </div>
+         <div class="conjuntoletras"> <!-- clase separada de letras para aplicarles los colores en principales color negro y secundarias color aquamarine -->
+                <p class="letrasprincipales">Lic. en Administración de Áreas Naturales</p> <!-- la clase la explico en la siguiente caja  -->
+                <p class="letrascolor">Presencial 5 años</p><!-- esta clase tambien la explico en la otra caja  -->
+                <p class="letrascolor">Duración 5 años</p><!-- tiene la misma clase que el anterior parrafo -->
+       </div>
+        </div>
+
+        <div class="segundacaja"><!-- segunda caja que contiene el verficado -->
+            <div class="fotico">
+                <img src="imagenes/verificado.png" alt="" width="40px" height="40px">
+     </div>
+     <div class="conjuntoletras"> <!-- aca se repite lo mismo de la anterior caja solo que cambia el contenido -->
+                <p class="letrasprincipales">Tec. Univ. Guardaespaldas</p><!-- se cambia la clase para que se apliquen los cambios del CSS -->
+                <p class="letrascolor">Presencial: Pto. Mafryn</p><!-- de aca para abajo van las letras que van de color aquamarina ya que tienen la misma clase llamada letras color para que se apliquen los cambios de colores del CSS  -->
+                <p class="letrascolor">Duración 3 años</p>
+     </div>
+    </div>
+    </main>
+
+</body>
+</html>
